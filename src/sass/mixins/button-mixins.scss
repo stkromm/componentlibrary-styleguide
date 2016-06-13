@@ -1,0 +1,33 @@
+@mixin button-color($color) {
+  color: contrast-text-color($color);
+  background-color: $color;
+  &:focus {
+    border-color: contrast-border-color($color);
+    box-shadow: 0 0 6px contrast-border-color($color);
+  }
+  &:hover, &:focus {
+    background-color: darken($color, 8);
+  }
+  &:active {
+    background-color: $color;
+  }
+}
+
+
+// Animation test
+@mixin focus-glow($color) {
+  @keyframes glow {
+    from {
+      border-color: $color;
+    }
+    to {
+      border-color: lighten($color, 40);
+    }
+  }
+  &:focus {
+    animation-name: glow;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+}

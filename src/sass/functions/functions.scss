@@ -1,0 +1,23 @@
+@function contrast-text-color($background-color) {
+  @if (lightness($background-color) > 50) {
+    @return $black;
+  } @else {
+    @return $white;
+  }
+}
+
+@function contrast-border-color($background-color) {
+  @if (lightness($background-color) > 50) {
+    @if (lightness($background-color) > 75) {
+      @return darken($background-color, 25);
+    } @else {
+      @return darken($background-color, 10);
+    }
+  } @else {
+    @if (lightness($background-color) > 25) {
+      @return lighten($background-color, 10);
+    } @else {
+      @return lighten($background-color, 25);
+    }
+  }
+}

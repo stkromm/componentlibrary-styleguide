@@ -1,0 +1,14 @@
+{
+  "name": "smartcampus-ui",
+  "description": "Core front-end library for the SmartCampus Webapplication",
+  "version": "0.0.1",
+  "homepage": "www.kit.edu",
+  "main": "src/sass/smartcampus-ui.css",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-loader": "~1.5.0",
+    "angular-mocks": "~1.5.0"
+  }
+}

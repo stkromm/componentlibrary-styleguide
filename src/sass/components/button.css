@@ -1,0 +1,46 @@
+.sc-styleguide-color {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  text-decoration: solid;
+  text-shadow: 2px 2px #FFFFFF;
+  font-size: 4em; }
+
+.button, .sc-primary-button, .sc-secondary-button {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font: Roboto;
+  font-size: 1.4em;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  margin: 0;
+  border: solid 2px transparent; }
+  .button:focus, .sc-primary-button:focus, .sc-secondary-button:focus {
+    outline: none; }
+
+.sc-primary-button {
+  color: #FFFFFF;
+  background-color: #009688;
+  border-radius: 8px; }
+  .sc-primary-button:focus {
+    border-color: #00c9b6;
+    box-shadow: 0 0 6px #00c9b6; }
+  .sc-primary-button:hover, .sc-primary-button:focus {
+    background-color: #006d63; }
+  .sc-primary-button:active {
+    background-color: #009688; }
+
+.sc-secondary-button {
+  color: #000000;
+  background-color: #d9d9d9; }
+  .sc-secondary-button:focus {
+    border-color: #999999;
+    box-shadow: 0 0 6px #999999; }
+  .sc-secondary-button:hover, .sc-secondary-button:focus {
+    background-color: #c4c4c4; }
+  .sc-secondary-button:active {
+    background-color: #d9d9d9; }
+
+/*# sourceMappingURL=button.css.map */

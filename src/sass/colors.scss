@@ -1,0 +1,28 @@
+$primary-color: #009688;
+$accent-color: #00BFA5;
+$outline-color: #03A9F4;
+$outline-accent-color: #0091EA;
+$black: #000000;
+$white: #FFFFFF;
+
+// Color Palette
+//
+// The main color palette used in the SmartCampus MainPage.
+//
+// $primary-color - Primary color
+// $accent-color - Accent color
+// $outline-color - Color used to mark focus
+// $black - The black color tone
+// $white - The white color tone
+//
+//markup:
+//<div style="background:{$modifiers};" class="sc-styleguide-color">{$modifiers}</dvi>
+//
+// Styleguide 1.1
+.sc-styleguide-color {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  text-decoration: solid;
+  text-shadow: 2px 2px $white;
+  font-size: 4em;
+}

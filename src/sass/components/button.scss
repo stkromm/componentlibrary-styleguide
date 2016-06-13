@@ -1,0 +1,95 @@
+@import "../colors.scss";
+@import "../mixins/button-mixins.scss";
+@import "../functions/functions.scss";
+
+$button-font: Roboto;
+
+// Buttons
+//
+// <p>
+// This sections contains the documentation of the SmartCampus buttons.
+// </p>
+//
+// Styleguide 2.1
+
+// styleguide:ignore:start
+.button {
+  display: inline-block;
+
+  text-align: center;
+  vertical-align: middle;
+
+  // Font style
+  font: $button-font;
+  font-size: 1.4em;
+
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  white-space: nowrap;
+
+  margin: 0;
+  border: solid 2px transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// styleguide:ignore:end
+
+// Action buttons
+//
+// <p>
+// This is the palette of action buttons of the SmartCampus. Action buttons are buttons in the general sense
+// - you click them and they fullfill an action. Detailed documentation for each button can be found in the following
+// sections.
+// </p>
+//
+// Markup:
+// <button class="sc-secondary-button {$modifiers}">Secondary</button> <button class="sc-primary-button {$modifiers}">Primary</button>
+//
+// Styleguide 2.1.1
+
+// Primary button
+//
+// The primary button is used to serve the main action of a view.
+//
+// .sc-primary-button - standard look
+// .sc-primary-button:hover       - Subtle hover
+// .sc-primary-button:focus       - Outlined focus
+//
+// markup:
+// <button class="sc-primary-button {$modifiers}">Click me!</button>
+//
+// Styleguide 2.1.1.1
+.sc-primary-button {
+  @extend .button;
+  @include button-color($primary-color);
+  border-radius: 8px;
+}
+
+// Secondary button
+//
+// <h4>Usage</h4>
+// <p>
+// The secondary button defines a less important action on a view.
+// </p>
+// <h4>Remarks</h4>
+// <p>
+// This button should be positioned in the flow before the primary button,
+// so the primary button builds an exit point.
+// </p>
+//
+// .sc-secondary-button - standard look
+// .sc-secondary-button:hover       - Subtle hover
+// .sc-secondary-button:focus       - Outlined focus
+//
+// markup:
+// <button class="sc-secondary-button {$modifiers}">Click me!</button>
+//
+// Styleguide 2.1.1.2
+.sc-secondary-button {
+  @extend .button;
+  @include button-color(lighten($black, 85));
+}
